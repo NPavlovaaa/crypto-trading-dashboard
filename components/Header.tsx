@@ -10,7 +10,7 @@ const Header = () => {
     const pathname = usePathname();
     return (
         <header>
-            <div className="main-cintainer inner">
+            <div className="main-container inner">
                 <Link href="/">
                     <Image src="/assets/logo.svg" alt="Logo" width={132} height={40}/>
                 </Link>
