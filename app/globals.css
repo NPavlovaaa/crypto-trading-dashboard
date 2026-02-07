@@ -157,6 +157,10 @@
     .main-container {
         @apply py-6 md:py-12 mx-auto px-4 sm:px-6 max-w-360 w-full space-y-6 md:space-y-6;
     }
+    .skeleton {
+        @apply bg-dark-400/60;
+    }
+
     header {
         @apply border-b border-dark-400 h-20;
 
@@ -184,4 +188,202 @@
             }
         }
     }
+
+
+    #coin-overview {
+        @apply w-full h-full xl:col-span-2 px-2 bg-dark-500 rounded-xl;
+
+        .header {
+            @apply flex-1 mb-2 flex gap-2 md:gap-3;
+
+            img {
+                @apply w-10 h-10 md:w-14 md:h-14;
+            }
+
+            .info {
+                @apply flex flex-col;
+
+                p {
+                    @apply flex text-purple-100 text-xs md:text-sm w-fit;
+                }
+
+                h1 {
+                    @apply text-xl md:text-2xl font-semibold;
+                }
+            }
+        }
+    }
+
+    #trending-coins {
+        @apply w-full flex flex-col justify-center h-full py-4 bg-dark-500 rounded-xl;
+
+        h4 {
+            @apply text-xl md:text-2xl font-semibold mb-2 px-5;
+        }
+
+        .trending-coins-table {
+            @apply bg-dark-500 overflow-hidden;
+
+            .name-cell {
+                @apply font-bold;
+
+                a {
+                    @apply pl-1 md:pl-2 py-1 md:py-2 xl:py-1 flex items-center gap-2 md:gap-3;
+
+                    img {
+                        @apply rounded-full size-8 md:size-9;
+                    }
+
+                    p {
+                        @apply text-sm md:text-base;
+                    }
+                }
+            }
+
+            .change-cell {
+                @apply font-medium py-4 pr-3 md:pr-5;
+            }
+
+            .price-cell {
+                @apply font-bold pr-5 text-sm max-w-full truncate;
+            }
+
+            .price-change {
+                @apply flex gap-1 items-center text-sm font-medium;
+            }
+        }
+    }
+
+    .home-grid {
+        @apply grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 items-start lg:items-center gap-6;
+    }
+
+    #coin-overview-fallback {
+        @apply w-full h-full xl:col-span-2 px-2 bg-dark-500 rounded-xl;
+
+        .header {
+            @apply flex-1 mb-2 flex gap-2 md:gap-3;
+        }
+
+        .header-image {
+            @apply w-10 h-10 md:w-14 md:h-14 rounded-full;
+        }
+
+        .info {
+            @apply flex flex-col gap-2;
+        }
+
+        .header-line-sm {
+            @apply h-3 w-24 md:w-28;
+        }
+
+        .header-line-lg {
+            @apply h-7 w-36 md:w-44;
+        }
+
+        .period-button-skeleton {
+            @apply h-7 w-9 md:w-10 rounded-sm;
+        }
+
+        .chart {
+            @apply h-90;
+        }
+
+        .chart-skeleton {
+            @apply h-full w-full rounded-xl;
+        }
+    }
+
+    #trending-coins-fallback {
+        @apply w-full flex flex-col justify-center h-full py-4 bg-dark-500 rounded-xl;
+
+        h4 {
+            @apply text-xl md:text-2xl font-semibold mb-2 px-5;
+        }
+
+        .trending-coins-table {
+            @apply bg-dark-500 overflow-hidden;
+
+            .name-cell {
+                @apply font-bold;
+            }
+
+            .name-link {
+                @apply pl-1 md:pl-2 py-1 md:py-2 xl:py-1 flex items-center gap-2 md:gap-3;
+            }
+
+            .name-image {
+                @apply rounded-full size-8 md:size-9;
+            }
+
+            .name-line {
+                @apply h-4 w-24;
+            }
+
+            .change-cell {
+                @apply font-medium py-4 pr-3 md:pr-5;
+            }
+
+            .price-cell {
+                @apply font-bold pr-5 text-sm max-w-full truncate;
+            }
+
+            .price-change {
+                @apply flex gap-1 items-center text-sm font-medium;
+            }
+        }
+
+        .change-line {
+            @apply h-4 w-16;
+        }
+
+        .price-line {
+            @apply h-4 w-20;
+        }
+
+        .change-icon {
+            @apply h-3.5 w-3.5 rounded-full;
+        }
+    }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #1e2833;
+    border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #171a34;
+}
+
+
+.custom-scrollbar [data-slot='table-container'] {
+    overflow-y: auto;
+}
+
+.custom-scrollbar [data-slot='table-container']::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+.custom-scrollbar [data-slot='table-container']::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar [data-slot='table-container']::-webkit-scrollbar-thumb {
+    background: #1e2833;
+    border-radius: 8px;
+}
+
+.custom-scrollbar [data-slot='table-container']::-webkit-scrollbar-thumb:hover {
+    background: #171a34;
 }
