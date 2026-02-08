@@ -2,7 +2,7 @@ import React from 'react'
 import DataTable from "@/components/DataTable";
 import Link from "next/link";
 import Image from "next/image";
-import {cn} from "@/lib/utils";
+import {cn, formatCurrency} from "@/lib/utils";
 import {TrendingDown, TrendingUp} from "lucide-react";
 import {fetcher} from "@/lib/coingecko.actions";
 import {TrendingCoinsFallback} from "@/components/home/fallback";
@@ -56,7 +56,7 @@ const TrendingCoins = async () => {
         {
             header: 'Price',
             cellClassName: 'price-cell',
-            cell: (coin) => coin.item.data.price,
+            cell: (coin) => formatCurrency(coin.item.data.price),
         },
     ];
 
