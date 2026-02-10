@@ -101,7 +101,7 @@
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
     "settings.editor.selected.configurable": "com.chat.deep.ai.settings.CodeAssistSettingsConfigurable",
-    "ts.external.directory.path": "/Users/admin/Desktop/Projects/crypto_trading_dashboard/node_modules/typescript/lib",
+    "ts.external.directory.path": "C:\\Users\\USER\\Desktop\\projects\\crypto-trading-dashboard\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
