@@ -174,3 +174,89 @@ interface Pagination {
     totalPages: number;
     hasMorePages: boolean;
 }
+
+interface PriceData {
+    usd: number;
+}
+
+interface Trade {
+    price?: number;
+    timestamp?: number;
+    type?: string;
+    amount?: number;
+    value?: number;
+}
+
+interface ExtendedPriceData {
+    usd: number;
+    coin?: string;
+    price?: number;
+    change24h?: number;
+    marketCap?: number;
+    volume24h?: number;
+    timestamp?: number;
+}
+
+interface WebSocketMessage {
+    type?: string;
+    c?: string;
+    ch?: string;
+    i?: string;
+    p?: number;
+    pp?: number;
+    pu?: number;
+    m?: number;
+    v?: number;
+    vo?: number;
+    o?: number;
+    h?: number;
+    l?: number;
+    t?: number;
+    to?: number;
+    ty?: string;
+    channel?: string;
+    identifier?: string;
+}
+
+interface UseCoinGeckoWebSocketProps {
+    coinId: string;
+    poolId: string;
+    liveInterval?: '1s' | '1m';
+}
+
+interface UseCoinGeckoWebSocketReturn {
+    price: ExtendedPriceData | null;
+    trades: Trade[];
+    ohlcv: OHLCData | null;
+    isConnected: boolean;
+}
+
+interface PoolData {
+    id: string;
+    address: string;
+    name: string;
+    network: string;
+}
+
+interface LiveDataProps {
+    coinId: string;
+    poolId: string;
+    coin: CoinDetailsData;
+    coinOHLCData?: OHLCData[];
+    children?: React.ReactNode;
+}
+
+interface LiveCoinHeaderProps {
+    name: string;
+    image: string;
+    livePrice?: number;
+    livePriceChangePercentage24h: number;
+    priceChangePercentage30d: number;
+    priceChange24h: number;
+}
+
+interface ConverterProps {
+    symbol: string;
+    icon: string;
+    priceList: Record<string, number>;
+}
